@@ -1,6 +1,6 @@
 <template>
   <div id="items">
-    <div v-for="item in $root.items">
+    <div v-for="item in items">
       <div class="large-4 medium-6 small-6 columns resultSpacing productListing" style="margin-bottom: 20px;">
         <div v-bind:id="item.id">
           <div class="productModel ellipsis"> {{item.designer_name}}<br/>{{item.model_name}} - {{item.name}}</div>
@@ -21,5 +21,3 @@
     </div>
   </div>
 </template>
-
-<script src="../assets/js/items.js"></script>

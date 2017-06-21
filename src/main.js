@@ -8,11 +8,21 @@ import ('bootstrap/dist/css/bootstrap.min.css')
 Vue.config.productionTip = false
 
 let app = new Vue({
-    el: '#app',
-    router,
-    template: '<App/>',
-    components: {App}
-  })
+  el: '#app',
+  router,
+  template: '<App/>',
+  components: {App},
+  data () {
+    return {
+      items: [],
+      pagination: {
+        skip: 0,
+        limit: 60
+      },
+      total: 0
+    }
+  }
+})
 
 
 document.addEventListener('DOMContentLoaded', function () {

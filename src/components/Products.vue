@@ -8,8 +8,16 @@
           <FilterList></FilterList>
         </td>
         <td>
+          <center>
+            <Pagination/>
+          </center>
           <hr/>
-          <Items></Items>
+          <Items />
+          <hr/>
+          <center>
+            <Pagination/>
+          </center>
+          <hr/>
         </td>
       </tr>
       </tbody>
@@ -22,9 +30,10 @@
 
 import Items from '@/components/Items'
 import FilterList from '@/components/FilterList'
+import Pagination from '@/components/Pagination'
 
 export default {
   name: 'products',
-  components: {Items, FilterList}
+  components: {Items, FilterList, Pagination}
 }
 </script>

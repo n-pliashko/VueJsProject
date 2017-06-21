@@ -48,8 +48,8 @@
     mounted() {
       let self = this;
       let data = {
-        skip: 0,
-        limit: 10,
+        skip: self.$root.pagination.skip,
+        limit: self.$root.pagination.limit,
         onlyFilters: 1
       }
 
