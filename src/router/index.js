@@ -5,7 +5,8 @@ import Products from '@/components/Products'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
+  mode : 'history',
   routes: [
     {
       path: '/products',
@@ -18,4 +19,5 @@ export default new Router({
       component: Hello
     }
   ]
-})
+});
+export default router

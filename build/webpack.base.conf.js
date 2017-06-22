@@ -55,10 +55,10 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
-      {
+      /*{
         test: /\.css$/,
         loader: "style-loader!css-loader"
-      }
+      }*/
     ]
   },
   plugins: [
@@ -66,11 +66,11 @@ module.exports = {
       {
         from: './src/static',
         to: '.'
-      },
+      }/*,
       {
         from: './src/assets',
         to: './assets'
-      }
+      }*/
     ]),
     new PrerenderSpaPlugin(
       path.join(__dirname, 'dist'),

@@ -1,6 +1,7 @@
 <template>
 <div>
     <h2 style="text-align: center;">Shopping Cart</h2>
+    <Search/>
     <table>
       <tbody style="vertical-align: top">
       <tr>
@@ -26,14 +27,4 @@
 </template>
 
 
-<script>
-
-import Items from '@/components/Items'
-import FilterList from '@/components/FilterList'
-import Pagination from '@/components/Pagination'
-
-export default {
-  name: 'products',
-  components: {Items, FilterList, Pagination}
-}
-</script>
+<script src="../assets/scripts/products.js"></script>

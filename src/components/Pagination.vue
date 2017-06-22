@@ -1,24 +1,13 @@
 <template>
   <div>
-    <button class="button red"  :disabled="$root.skip > 0 ? '' : 'disabled'">
+    <button class="button red"  :disabled="disabledPrevious" v-on:click="loadPrevious">
     PREVIOUS
     </button>
-    <button class="button red" :disabled="parseInt($root.skip) + parseInt($root.limit) < $root.total ? '' : 'disabled'">
+    <button class="button red" :disabled="disabledNext" v-on:click="loadNext">
     NEXT
     </button>
-    <b style="text-align: center; line-height: 1">[{{$root.total}}]</b>
+    <b style="text-align: center; line-height: 1">[{{$root.items.total}}]</b>
   </div>
 </template>
 
-<script>
-  export default {
-    name: 'pagination',
-    data() {
-      return {
-        skip: this.$root.pagination.skip,
-        limit: this.$root.pagination.limit,
-        total: this.$root.total
-      }
-    }
-  }
-</script>
+<script src="../assets/scripts/pagination.js"></script>

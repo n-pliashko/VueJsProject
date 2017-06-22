@@ -4,16 +4,16 @@
       <span class="headTitle"><a>{{title}}</a></span>
       <span class="subClearLink">
           <a class="highlight clear_section toggleControl closed"
-             style="display: block">Clear</a>
+             :style="$root.filters[filterName].length !== 0 ? 'display: block' : 'display:none'" v-on:click="clearAll">Clear</a>
         </span>
     </div>
     <ul class="refine-control" id="scroll_250" >
       <li v-for="cat in categories" :class="[!!cat.is_active ? '' : 'disactive']">
         <a v-bind:id="filterName + cat.id" class="search_element ellipsis enabled">
           <input v-if="onlyOne == 0" type="checkbox" v-bind:name="filterName" :value="cat.id"  v-bind:id="'input-' + filterName + cat.id"
-                 v-bind:checked="false" v-model="checkedFilters"/>
-          <input v-else type="radio" v-bind:name="filterName" :value="cat.id"  v-bind:id="'input-' + filterName + cat.id"
-                 v-bind:checked="false" v-model="checkedFilters"/>
+                 v-model="$root.filters[filterName]"/>
+          <input v-else type="radio" v-bind:name="filterName" :value="cat.id"  :id="'input-' + filterName + cat.id"
+                 v-model="$root.filters[filterName]" :checked="$root.filters[filterName].indexOf(cat.id) !== -1 ? 'checked' : ''"/>
           <label v-bind:for="'input-' + filterName + cat.id" style="cursor:pointer">
             {{cat.name}}
             <span class="refine_column_count">({{cat.count_items}})</span>
@@ -21,21 +21,10 @@
         </a>
       </li>
     </ul>
-    {{checkedFilters}}
   </div>
 </template>
 
-<script>
-export default {
-  name: 'filters',
-  data() {
-    return {
-      checkedFilters: []
-    }
-  },
-  props: ['title', 'filterName', 'onlyOne', 'categories']
-}
-</script>
+<script src="../assets/scripts/filters.js"></script>
 
 <style>
   .disactive {
