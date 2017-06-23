@@ -134,7 +134,6 @@ const storeVue = {
     },
     changeNavigation: function() {
       let self = this;
-      console.log(self.navigation);
       let _hash = self.navigation.hash;
       let _search = getSearchString(self.filters);
       let sign = _search.length > 0 ? '&' : '?';
