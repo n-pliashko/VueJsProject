@@ -5,77 +5,33 @@ export default {
   components: {Filters},
   data() {
     return {
-      categories: [],
-      designers: [],
       priceTo: '',
-      priceFrom: this.$root.filters.price_from.length > 0 ? this.$root.filters.price_from : this.$root.items.priceFrom
+      priceFrom: ''
     }
   },
   computed: {
-    filters: function () {
-      return this.$root.filters;
+    _priceFrom: function() {
+      return this.$root.filters.price_from.length > 0 ? this.$root.filters.price_from : this.$root.items.priceFrom;
+    },
+    _priceTo: function() {
+      return this.$root.filters.price_to.length > 0 ? this.$root.filters.price_to : this.$root.items.priceTo;
     }
-  },
-  mounted() {
-    this.$on('loadCategories', this.loadCategories);
-    this.$emit('loadCategories');
-
-    this.priceFrom = this.$root.filters.price_from.length > 0 ? this.$root.filters.price_from : this.$root.items.priceFrom;
-    this.priceTo = this.$root.filters.price_to.length > 0 ? this.$root.filters.price_to : this.$root.items.priceTo;
   },
   methods: {
     clearAllFilters: function() {
-      this.$root.filters.cats = [];
-      this.$root.filters.designers = [];
-    },
-    loadCategories: function() {
-      let self = this;
-      let data = {
-        skip: self.$root.pagination.skip,
-        limit: self.$root.pagination.limit,
-        onlyFilters: 1
-      };
-
-      if (self.$root.search.params['q'] && self.$root.search.params['q'].length > 0)
-        Object.assign(data, {q: self.$root.search.params['q']})
-
-      Object.assign(data, self.$root.filters);
-
-      let form = new FormData();
-      Object.keys(data).map(key => (
-        form.append(key, data[key])
-      ));
-
-      let dataRequest = {
-        method: 'POST',
-        headers: new Headers({
-          'X-Requested-With': 'XMLHttpRequest'
-        }),
-        body: form
-      };
-      fetch('http://ssyii/web/site/catalogue_search', dataRequest).then(response => response.json())
-        .then(json => {
-            self.categories = json.categories
-            self.designers = json.designers
-          }
-        ).catch(() => {
-        {
-          self.designers = []
-          self.categories = []
-        }
+      Object.keys(this.$root.filters).map(key => {
+        this.$root.filters[key] = [];
       });
     },
     changePrice: function() {
-      this.$root.filters.price_from = this.priceFrom;
-      this.$root.filters.price_to = this.priceTo;
-    }
-  },
-  watch: {
-    filters: {
-      handler: function () {
-        this.$emit('loadCategories');
-      },
-      deep: true
+      let _price = {
+        price_from : this.priceFrom.length > 0 ? this.priceFrom : this._priceFrom,
+        price_to : this.priceTo.length > 0 ? this.priceTo : this._priceTo
+      };
+      Object.assign(this.$root.filters, _price);
+    },
+    handleInput: function(name, value) {
+      this[name] = value;
     }
   }
 }

@@ -15,14 +15,8 @@ const parseQueryString = queryString => {
     temp = queries[i].split('=');
     if (temp.length > 1) {
       params[temp[0]] = [];
-      temp[1].split(',').forEach(id => {
-        let val = parseInt(id.trim());
-        if (!isNaN(val))
-          params[temp[0]].push(val);
-        else {
-          delete  params[temp[0]];
-        }
-
+      temp[1].split(',').forEach(val => {
+        params[temp[0]].push(val.trim());
       });
     }
   }
@@ -45,8 +39,6 @@ const storeVue = {
       filters: {
         price_from: '',
         price_to: '',
-        designers: [],
-        cats: []
       },
       navigation: {
         location: window.location.href,
@@ -59,7 +51,8 @@ const storeVue = {
       search: {
         query: '',
         params: {}
-      }
+      },
+      categories: []
     }
   },
   mounted() {
@@ -67,22 +60,24 @@ const storeVue = {
     this.$on('changeNavigation', this.changeNavigation);
 
     let emit = true;
-    if (this.navigation.search.length > 0) {
-      let params = parseQueryString(this.navigation.search);
-      if (params['q'] > 0) {
-        this.search.query = params['q'] > 0 ? '?q=' + params['q'] : '';
-        this.search.params = params;
-        emit = false;
-      }
-    }
-
     let _search = this.navigation.search.replace(/^\?/, '')
     if (!this.isHhistoryApiAvailable) {
       _search = this.navigation.hash.replace(/^#/, '')
     }
 
     if (_search.length > 0) {
-      Object.assign(this.filters, parseQueryString(_search));
+      let params = parseQueryString(_search);
+      if (Object.keys(params).indexOf('q') !== -1) {
+        this.search.query = params.q.length > 0 ? '?q=' + params.q.join(', ') : '';
+        this.search.params = {q: params.q.join(',')};
+        delete params.q;
+      }
+      Object.keys(params).map(key => {
+          if (Object.keys(this.filters).indexOf(key) === -1)
+            this.$set(this.filters, key, params[key]);
+          else
+            this.filters[key] = params[key];
+      });
       emit = false;
     }
     if (emit) {
@@ -99,8 +94,7 @@ const storeVue = {
       let self = this;
       let data = {
         skip: self.pagination.skip,
-        limit: self.pagination.limit,
-        onlyItems: 1
+        limit: self.pagination.limit
       };
       Object.assign(data, self.filters);
       if (self.search.params['q'] && self.search.params['q'].length > 0)
@@ -120,21 +114,27 @@ const storeVue = {
       };
       fetch('http://ssyii/web/site/catalogue_search', dataRequest).then(response => response.json())
         .then(json => {
-            self.items.data = json.items
-            self.items.total = json.total
-            self.items.priceFrom = parseFloat(json.min_price).toFixed(2)
-            self.items.priceTo = parseFloat(json.max_price).toFixed(2)
+            json.filters.map(key => {
+              if (Object.keys(self.filters).indexOf(key) === -1)
+                self.$set(self.filters, key,[]);
+            });
+            self.categories = json.categories;
+            self.items.data = json.items.items;
+            self.items.total = json.items.total;
+            self.items.priceFrom = parseFloat(json.items.min_price).toFixed(2);
+            self.items.priceTo = parseFloat(json.items.max_price).toFixed(2);
           }
         ).catch(() => {
-        self.items.data = []
-        self.items.total =  0
-        self.items.priceFrom = ''
-        self.items.priceTo = ''
+        self.items.data = [];
+        self.items.total = 0;
+        self.items.priceFrom = '';
+        self.items.priceTo = '';
+        self.categories = [];
       });
     },
     changeNavigation: function() {
-      let self = this
-      console.log(self.navigation)
+      let self = this;
+      console.log(self.navigation);
       let _hash = self.navigation.hash;
       let _search = getSearchString(self.filters);
       let sign = _search.length > 0 ? '&' : '?';
@@ -174,7 +174,7 @@ const storeVue = {
     filters: {
       handler: function () {
         this.$emit('changeNavigation');
-        this.$emit('loadItems')
+        this.$emit('loadItems');
       },
       deep: true
     }

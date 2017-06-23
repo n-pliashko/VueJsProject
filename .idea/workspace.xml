@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf1b4371-a6c5-4c05-a940-57270b5b8619" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scripts/filterList.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scripts/filters.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scripts/pagination.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scripts/products.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assets/scripts/search.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Search.vue" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/store/storeVue.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assets/template/items.vue" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assets/js/items.js" afterPath="$PROJECT_DIR$/src/assets/scripts/items.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/webpack.base.conf.js" afterPath="$PROJECT_DIR$/build/webpack.base.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.vue" afterPath="$PROJECT_DIR$/src/App.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scripts/filterList.js" afterPath="$PROJECT_DIR$/src/assets/scripts/filterList.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scripts/filters.js" afterPath="$PROJECT_DIR$/src/assets/scripts/filters.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assets/scripts/search.js" afterPath="$PROJECT_DIR$/src/assets/scripts/search.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/FilterList.vue" afterPath="$PROJECT_DIR$/src/components/FilterList.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Filters.vue" afterPath="$PROJECT_DIR$/src/components/Filters.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Items.vue" afterPath="$PROJECT_DIR$/src/components/Items.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Pagination.vue" afterPath="$PROJECT_DIR$/src/components/Pagination.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Products.vue" afterPath="$PROJECT_DIR$/src/components/Products.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.js" afterPath="$PROJECT_DIR$/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Search.vue" afterPath="$PROJECT_DIR$/src/components/Search.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/storeVue.js" afterPath="$PROJECT_DIR$/src/store/storeVue.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,6 +21,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Items.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Items.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Products.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Products.vue">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,41 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filters.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/scripts/filters.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterList.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/FilterList.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="89" lean-forward="false" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="filterList.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/scripts/filterList.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storeVue.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="storeVue.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/store/storeVue.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
-              <caret line="92" column="21" lean-forward="true" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+            <state relative-caret-position="-51">
+              <caret line="138" column="44" lean-forward="false" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/scripts/search.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -87,8 +66,8 @@
       <file leaf-file-name="Search.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Search.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="114" lean-forward="false" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="114" />
+            <state relative-caret-position="102">
+              <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
@@ -97,11 +76,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assets/scripts/search.js">
+      <file leaf-file-name="Filters.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Filters.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+            <state relative-caret-position="391">
+              <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#label#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filters.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/scripts/filters.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -124,8 +115,9 @@
       <find>$root.</find>
       <find>title</find>
       <find>v-model</find>
-      <find>className</find>
       <find>loadItems</find>
+      <find>parseQueryString</find>
+      <find>className</find>
     </findStrings>
     <replaceStrings>
       <replace>class</replace>
@@ -157,18 +149,18 @@
         <option value="$PROJECT_DIR$/src/App.vue" />
         <option value="$PROJECT_DIR$/src/assets/scripts/items.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/src/components/Search.vue" />
         <option value="$PROJECT_DIR$/src/assets/scripts/products.js" />
         <option value="$PROJECT_DIR$/src/components/Products.vue" />
-        <option value="$PROJECT_DIR$/src/assets/scripts/filters.js" />
         <option value="$PROJECT_DIR$/src/assets/scripts/pagination.js" />
         <option value="$PROJECT_DIR$/src/components/Pagination.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/assets/scripts/search.js" />
-        <option value="$PROJECT_DIR$/src/components/Filters.vue" />
-        <option value="$PROJECT_DIR$/src/assets/scripts/filterList.js" />
         <option value="$PROJECT_DIR$/src/store/storeVue.js" />
         <option value="$PROJECT_DIR$/src/components/FilterList.vue" />
+        <option value="$PROJECT_DIR$/src/components/Search.vue" />
+        <option value="$PROJECT_DIR$/src/assets/scripts/filterList.js" />
+        <option value="$PROJECT_DIR$/src/assets/scripts/search.js" />
+        <option value="$PROJECT_DIR$/src/components/Filters.vue" />
+        <option value="$PROJECT_DIR$/src/assets/scripts/filters.js" />
       </list>
     </option>
   </component>
@@ -818,7 +810,7 @@
       <option name="presentableId" value="Default" />
       <updated>1498043542365</updated>
       <workItem from="1498043543771" duration="4353000" />
-      <workItem from="1498047983370" duration="38396000" />
+      <workItem from="1498047983370" duration="52624000" />
     </task>
     <task id="LOCAL-00001" summary="vue.js items loading">
       <created>1498061888069</created>
@@ -827,11 +819,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498061888069</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vue.js items loading and filtration">
+      <created>1498147406586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1498147406586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42749000" />
+    <option name="totallyTimeSpent" value="56977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -884,7 +883,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="vue.js items loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue.js items loading" />
+    <MESSAGE value="vue.js items loading and filtration" />
+    <option name="LAST_COMMIT_MESSAGE" value="vue.js items loading and filtration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -923,7 +923,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="17" lean-forward="true" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -957,10 +959,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="40" lean-forward="true" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#span#1;n#div#0;n#div#0;n#template#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,14 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Items.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1201,37 +1192,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Filters.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="20" column="12" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scripts/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Search.vue">
+    <entry file="file://$PROJECT_DIR$/src/components/Items.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="114" lean-forward="false" selection-start-line="7" selection-start-column="94" selection-end-line="7" selection-end-column="114" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/scripts/filters.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <caret line="7" column="51" lean-forward="false" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1246,26 +1210,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/storeVue.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="21" lean-forward="true" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/scripts/filterList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="4" lean-forward="true" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="221">
+          <caret line="13" column="115" lean-forward="false" selection-start-line="13" selection-start-column="115" selection-end-line="13" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/FilterList.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="89" lean-forward="false" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+        <state relative-caret-position="306">
+          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#hr#0;n#div#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scripts/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Search.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#form#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Filters.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#label#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/scripts/filters.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="12" lean-forward="true" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/storeVue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="138" column="44" lean-forward="false" selection-start-line="138" selection-start-column="44" selection-end-line="138" selection-end-column="44" />
           <folding />
         </state>
       </provider>
