@@ -13,7 +13,13 @@ export default {
   methods: {
     handleSubmit: function (e) {
       e.preventDefault();
-      Object.assign(this.$root.search.params, {q: this.inputSearchText});
+      let params = {
+        params: {
+          q: this.inputSearchText
+        },
+        query: '?q=' + this.inputSearchText
+      };
+      this.$root.search = Object.assign({}, this.$root.search, params);
     },
     handleInput: function(value) {
       this.inputSearchText = value;

@@ -52,11 +52,12 @@ const storeVue = {
         query: '',
         params: {}
       },
-      categories: []
+      filtersList: []
     }
   },
   mounted() {
-    this.$on('loadItems', this.loadItems);
+    this.$on('loadFilters', this.loadComponents);
+    this.$on('loadItems', this.loadComponents);
     this.$on('changeNavigation', this.changeNavigation);
 
     let emit = true;
@@ -81,7 +82,8 @@ const storeVue = {
       emit = false;
     }
     if (emit) {
-      this.$emit('loadItems');
+      this.$emit('loadFilters', 1);
+      this.$emit('loadItems', 0, 1);
     }
   },
   computed: {
@@ -90,11 +92,13 @@ const storeVue = {
     }
   },
   methods: {
-    loadItems: function() {
+    loadComponents: function(onlyFilters = 0, onlyItems = 0) {
       let self = this;
       let data = {
         skip: self.pagination.skip,
-        limit: self.pagination.limit
+        limit: self.pagination.limit,
+        onlyFilters: onlyFilters,
+        onlyItems: onlyItems
       };
       Object.assign(data, self.filters);
       if (self.search.params['q'] && self.search.params['q'].length > 0)
@@ -114,23 +118,22 @@ const storeVue = {
       };
       fetch('http://ssyii/web/site/catalogue_search', dataRequest).then(response => response.json())
         .then(json => {
-            json.filters.map(key => {
-              if (Object.keys(self.filters).indexOf(key) === -1)
-                self.$set(self.filters, key,[]);
-            });
-            self.categories = json.categories;
-            self.items.data = json.items.items;
-            self.items.total = json.items.total;
-            self.items.priceFrom = parseFloat(json.items.min_price).toFixed(2);
-            self.items.priceTo = parseFloat(json.items.max_price).toFixed(2);
+            if (json.filters) {
+              json.filters.map(key => {
+                if (Object.keys(self.filters).indexOf(key) === -1)
+                  self.$set(self.filters, key, []);
+              });
+            }
+            if (json.categories)
+              self.filtersList = json.categories;
+            if (json.items) {
+              self.items.data = json.items.items;
+              self.items.total = json.items.total;
+              self.items.priceFrom = parseFloat(json.items.min_price).toFixed(2);
+              self.items.priceTo = parseFloat(json.items.max_price).toFixed(2);
+            }
           }
-        ).catch(() => {
-        self.items.data = [];
-        self.items.total = 0;
-        self.items.priceFrom = '';
-        self.items.priceTo = '';
-        self.categories = [];
-      });
+        );
     },
     changeNavigation: function() {
       let self = this;
@@ -160,20 +163,22 @@ const storeVue = {
     search: {
       handler: function() {
         this.$emit('changeNavigation');
-        this.$emit('loadItems');
+        this.$emit('loadFilters', 1);
+        this.$emit('loadItems', 0, 1);
         } ,
       deep: true
     },
     pagination: {
       handler: function() {
-        this.$emit('loadItems');
+        this.$emit('loadItems', 0, 1);
       } ,
       deep: true
     },
     filters: {
       handler: function () {
         this.$emit('changeNavigation');
-        this.$emit('loadItems');
+        this.$emit('loadFilters', 1);
+        this.$emit('loadItems', 0, 1);
       },
       deep: true
     }

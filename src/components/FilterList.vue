@@ -25,7 +25,7 @@
           </div>
         </div>
         <hr style="margin: 0"/>
-        <Filters v-for="filter in $root.categories" :key="filter.name" :title="filter.title" :categories="filter.value" :filterName="filter.name" :onlyOne="filter.onlyOne ? filter.onlyOne : false" ></Filters>
+        <Filters v-for="filter in $root.filtersList" :key="filter.name" :title="filter.title" :categories="filter.value" :filterName="filter.name" :onlyOne="filter.onlyOne ? filter.onlyOne : false" ></Filters>
       </div>
     </div>
   </div>

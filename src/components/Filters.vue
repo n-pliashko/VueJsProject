@@ -25,7 +25,7 @@
           />
           <label :for="'input-' + filterName + cat.id" style="cursor:pointer">
             {{cat.name}}
-            <span class="refine_column_count">({{cat.count_items}})</span>
+            <span class="refine_column_count">{{cat.count_items >0 ? '(' + cat.count_items + ')' : ''}}</span>
           </label>
         </a>
       </li>
